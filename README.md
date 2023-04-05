@@ -5,32 +5,27 @@ SoupAI uses a stochastic data graph of ingredients in recipes to create a robust
 ## Project Structure
 By default, the project assumes the following directory structure:
  
-    +-- dataset                                    # Files that are within GitHub's file size limit
-    ¦   +-- recipes-dataset.csv                           # A word embedding model, will be used in utils.tree
+    +-- dataset                                           # Dataset information
+    ¦   +-- recipes-dataset.csv                           # renamed recipe database, must be downloaded, exceedes max file size
     ¦   
-    ¦   +-- ingredients                   # Examples of testing data, n=5
-    ¦       +-- makeAlias.py                          # Inputs in testing set (directory of .txt files)
-    ¦       +-- updateLiquid.py                          # Inputs in testing set (directory of .txt files)
-    ¦       +-- webScraping.py                          # Inputs in testing set (directory of .txt files)
-    ¦       +-- modified                          # Inputs in testing set (directory of .txt files)
-    ¦           +-- ingredient-root-was-modified-wliquid.csv
-    ¦       +-- original                          # Human-written outputs in testing set (directory of .txt files)
-    ¦           +-- ingredient-root.csv                          # Inputs in testing set (directory of .txt files)
-    ¦           +-- liquid-ingredient-root.csv                          # Inputs in testing set (directory of .txt files)  
+    ¦   +-- ingredients                                   # Ingredients information
+    ¦       +-- makeAlias.py                              # creates ingredient dict
+    ¦       +-- updateLiquid.py                           # creates ingredient dict
+    ¦       +-- webScraping.py                            # creates ingredient dict
+    ¦       +-- modified                                  # Modified ingredient dict
+    ¦           +-- ingredient-root-was-modified-wliquid.csv   # Ingredient dict used in model
+    ¦       +-- original                                  # Original ingredients data from webscraping
+    ¦           +-- ingredient-root.csv                   # Original ingredients mapped to their root ingredient
+    ¦           +-- liquid-ingredient-root.csv            # Original liquid ingredients mapped to their root ingredient 
     ¦   
-    +-- ingredientBasedModelCreator.py                                # Files that exceeds GitHub's file size limit
-    +-- ingredientBasedSoupMaker.py                           # files created by notebook 3 using data.pickle   
+    +-- ingredientBasedModelCreator.py                    # Creates ingredient model to create soups
+    +-- ingredientBasedSoupMaker.py                       # Main soup maker that generates ingredient lists
     ¦   
-    +-- model                               
-    ¦   +-- ing-based-ingredient-model.csv             # Useful for data pre-processing
-    ¦   +-- ing-based-soup-ingredient-model.csv                      # Useful for analyzing the generated texts
+    +-- model                                             # Stores ingredient models used in the soup maker                            
+    ¦   +-- ing-based-ingredient-model.csv                # Ingredient model for all recipes 
+    ¦   +-- ing-based-soup-ingredient-model.csv           # Ingredient model for soup recipes
 
 ## Download related files
-We share the dataset, model, and related files at [OneDrive](https://1drv.ms/u/s!AnHFRPEgz5RWuwaBg_RdnTTE2d86?e=BU4DQh)
-Please download and put them under the correct directory.
-```
-RecipeGPT-exp/big_data/
-RecipeGPT-exp/training/gpt-2/models/
-RecipeGPT-exp/recipe1M_1218/
+Please download, rename and put them under the correct directory. 
 
-```
+RecipeNGL: https://recipenlg.cs.put.poznan.pl/
