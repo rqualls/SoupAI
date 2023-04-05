@@ -24,13 +24,18 @@ By default, the project assumes the following directory structure:
     +-- model                                             # Stores ingredient models used in the soup maker                            
     ¦   +-- ing-based-ingredient-model.csv                # Ingredient model for all recipes 
     ¦   +-- ing-based-soup-ingredient-model.csv           # Ingredient model for soup recipes
+    ¦
+    ¦   +-- ing-based-ingredient-model.csv                # Ingredient model for all recipes 
+    ¦   +-- ing-based-soup-ingredient-model.csv           # Ingredient model for soup recipes  
 
-ing-based-ingredient-model.csv and ing-based-soup-ingredient-model.csv are generated when ingredientBasedModelCreator.py is ran
-python3 ingredientBasedModelCreator.py
-The database RecipeNGL should be downloaded, renamed to recipes-dataset.csv, and placed in the dataset directory
-run python3 ingredientBasedSoupMaker.py to generate soup ingredients
+## Run Instructions
+1) ing-based-ingredient-model.csv and ing-based-soup-ingredient-model.csv are generated when ingredientBasedModelCreator.py is ran:
+```python3 ingredientBasedModelCreator.py```
+2) The database RecipeNGL should be downloaded, renamed to recipes-dataset.csv, and placed in the dataset directory
+3) run ingredientBasedSoupMaker.py to generate soup ingredients:
+```python3 ingredientBasedSoupMaker.py```
 
 ## Download related files
 Please download, rename and put them under the correct directory. 
 
-RecipeNGL: https://recipenlg.cs.put.poznan.pl/
+```RecipeNGL:``` https://recipenlg.cs.put.poznan.pl/
