@@ -24,9 +24,7 @@ By default, the project assumes the following directory structure:
     +-- model                                             # Stores ingredient models used in the soup maker                            
     ¦   +-- ing-based-ingredient-model.csv                # Ingredient model for all recipes 
     ¦   +-- ing-based-soup-ingredient-model.csv           # Ingredient model for soup recipes
-    ¦
-    ¦   +-- ing-based-ingredient-model.csv                # Ingredient model for all recipes 
-    ¦   +-- ing-based-soup-ingredient-model.csv           # Ingredient model for soup recipes  
+
 
 ## Run Instructions
 1) ing-based-ingredient-model.csv and ing-based-soup-ingredient-model.csv are generated when ingredientBasedModelCreator.py is ran:
